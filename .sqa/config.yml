@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    git.scc.kit.edu/px5501/Mss:
+      branch: main
+      repo: https://git.scc.kit.edu/px5501/Mss
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.6
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      git.scc.kit.edu/px5501/Mss git:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-linen-woodpecker.sh
+        container: qc.acc_scaly-chocolate-donkey
+  QC.Doc:
+    repos:
+      git.scc.kit.edu/px5501/Mss find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-ruby-caracal.sh
+        container: qc.doc_pokey-cinnamon-bongo
+      git.scc.kit.edu/px5501/Mss git:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-lime-binturong.sh
+        container: qc.doc_slimy-pink-fish
+      git.scc.kit.edu/px5501/Mss markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-mustard-beagle.sh
+        container: qc.doc_slaphappy-celadon-jellyfish
+  QC.Lic:
+    repos:
+      git.scc.kit.edu/px5501/Mss licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-fuchsia-squid.sh
+        container: qc.lic_smelly-myrtle-weasel
+  QC.Sec:
+    repos:
+      git.scc.kit.edu/px5501/Mss bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-amaranth-dog.sh
+        container: qc.sec_gloppy-ochre-maltese
+  QC.Sty:
+    repos:
+      git.scc.kit.edu/px5501/Mss flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-puce-salamander.sh
+        container: qc.sty_gummy-champagne-angora
+  QC.Ver:
+    repos:
+      git.scc.kit.edu/px5501/Mss get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-aqua-hamster.sh
+        container: qc.ver_geeky-xanthic-mastiff
+timeout: 1800
