@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       git.scc.kit.edu/px5501/Mss git:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-celadon-starfish.sh
-        container: qc.acc_snippy-vermilion-sheepdog
+        - /usr/bin/env sh .sqa/script.slaphappy-ecru-wolfhound.sh
+        container: qc.acc_smelly-mauve-meerkat
   QC.Doc:
     repos:
       git.scc.kit.edu/px5501/Mss find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-turquoise-dolphin.sh
-        container: qc.doc_muggy-heliotrope-coati
+        - /usr/bin/env sh .sqa/script.homely-harlequin-fossa.sh
+        container: qc.doc_seedy-vermilion-zorse
       git.scc.kit.edu/px5501/Mss git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-cornflower-blue.sh
-        container: qc.doc_lovely-linen-avocet
+        - /usr/bin/env sh .sqa/script.clammy-cornflower-molly.sh
+        container: qc.doc_pasty-taupe-labradoodle
       git.scc.kit.edu/px5501/Mss markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-rust-seahorse.sh
-        container: qc.doc_snazzy-asparagus-forest
+        - /usr/bin/env sh .sqa/script.zippy-lemon-fly.sh
+        container: qc.doc_slimy-jade-chamois
   QC.Lic:
     repos:
       git.scc.kit.edu/px5501/Mss licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-chestnut-moth.sh
-        container: qc.lic_messy-khaki-raccoon
+        - /usr/bin/env sh .sqa/script.clammy-goldenrod-ibis.sh
+        container: qc.lic_tacky-blue-millipede
   QC.Sec:
     repos:
       git.scc.kit.edu/px5501/Mss bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-linen-burmese.sh
-        container: qc.sec_pasty-xanthic-burmese
+        - /usr/bin/env sh .sqa/script.woolly-rust-hedgehog.sh
+        container: qc.sec_squeaky-lilac-eagle
   QC.Sty:
     repos:
       git.scc.kit.edu/px5501/Mss flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-chartreuse-husky.sh
-        container: qc.sty_skinny-wheat-pig
+        - /usr/bin/env sh .sqa/script.hilly-cyan-frise.sh
+        container: qc.sty_freaky-lavender-dodo
   QC.Ver:
     repos:
       git.scc.kit.edu/px5501/Mss get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-rust-rabbit.sh
-        container: qc.ver_lumpy-copper-hyena
+        - /usr/bin/env sh .sqa/script.greasy-lime-chameleon.sh
+        container: qc.ver_wiggy-thistle-dog
 timeout: 1800
